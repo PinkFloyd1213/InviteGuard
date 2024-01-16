@@ -11,7 +11,7 @@ class HelpView(View):
         self.add_item(Button(style=ButtonStyle.primary,label="Invite",url=config.invite_url,emoji="🔗"))
         self.add_item(Button(style=ButtonStyle.primary,label="GitHub",url=config.github_url,emoji="💻"))
         self.add_item(Button(style=ButtonStyle.primary,label="Privacy Policy",url=config.privacy_policy_url,emoji="📃"))
-        self.add_item(Button(style=ButtonStyle.green,label="Credit",url=config_url.credit,emoji="🧩"))
+        self.add_item(Button(style=ButtonStyle.green,label="Credit",url=config.credit_url,emoji="🧩"))
 
 def embed(interaction: Interaction,config: HelpConfig) -> Tuple[Embed,HelpView]:
     assert interaction.guild
