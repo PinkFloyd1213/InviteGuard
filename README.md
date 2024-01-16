@@ -27,6 +27,5 @@ Clone the repository, populate `BotConfig.token` in the provided `config.json`, 
 
 The bot should connect to Discord and function with no further configuration needed.
 
-## TODO
-- Reaction roles (submodule)
-- Redundant worker threads to mitigate dropped events
+## Disclaimer
+Originally developed by Wow13524 ([Github](https://github.com/wow13524/invite-role-bot)), my bot is online to compensate for the long downtime of the original bot. All credit remains with him. If Wow13524 wants me to shut down this bot, he can contact me on my [support server](https://discord.gg/GEgWkshkRH).
