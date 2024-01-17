@@ -1,17 +1,17 @@
-# Utiliser une image de base Python officielle, par exemple Python 3.9
+# Use an official Python base image, for example, Python 3.9
 FROM python:3.9-slim
 
-# Définir le répertoire de travail dans le conteneur
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copier le fichier requirements.txt dans le conteneur pour installer les dépendances
+# Copy the requirements.txt file into the container to install dependencies
 COPY requirements.txt .
 
-# Installer les dépendances Python
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copier le reste du code source de l'application dans le conteneur
+# Copy the rest of the application source code into the container
 COPY . .
 
-# Exécuter main.py lorsque le conteneur démarre
+# Execute main.py when the container starts
 CMD ["python", "main.py"]
