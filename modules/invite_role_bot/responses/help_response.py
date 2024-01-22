@@ -12,6 +12,8 @@ class HelpView(View):
         self.add_item(Button(style=ButtonStyle.primary,label="GitHub",url=config.github_url,emoji="💻"))
         self.add_item(Button(style=ButtonStyle.primary,label="Privacy Policy",url=config.privacy_policy_url,emoji="📃"))
         self.add_item(Button(style=ButtonStyle.green,label="Credit",url=config.credit_url,emoji="🧩"))
+        self.add_item(Button(style=ButtonStyle.primary,label="Vote for the bot !",url=config.vote_url,emoji="🗳️"))
+
 
 def embed(interaction: Interaction,config: HelpConfig) -> Tuple[Embed,HelpView]:
     assert interaction.guild
@@ -28,5 +30,6 @@ def embed(interaction: Interaction,config: HelpConfig) -> Tuple[Embed,HelpView]:
     embed.add_field(name="/invrole list",value="Shows a list of all invite-role connections within this guild.",inline=False)
     embed.add_field(name="/invclone [invite_url: str]",value="Creates an identical clone of an invite.",inline=False)
     embed.add_field(name="Credit",value="Original idea by wow13524",inline=False)
+    embed.add_field(name="Vote for us !",value="If you like this bot, consider voting for us on Top.gg (link in the button below).",inline=False)
     help_view: HelpView = HelpView(config=config)
     return (embed,help_view)
