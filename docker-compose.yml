@@ -4,7 +4,7 @@ services:
     image: inviteguard
     container_name: invite_guard
     volumes:
-      - ./db/invite_role_bot.db:/app/invite_role_bot.db
-      - ./db/invite_role_bot.db-shm:/app/invite_role_bot.db-shm
-      - ./db/invite_role_bot.db-wal:/app/invite_role_bot.db-wal
+      - /root/files/data_invite/invite_role_bot.db:/app/invite_role_bot.db
+      - /root/files/data_invite/db/invite_role_bot.db-shm:/app/invite_role_bot.db-shm
+      - /root/files/data_invite/db/invite_role_bot.db-wal:/app/invite_role_bot.db-wal
     restart: always
